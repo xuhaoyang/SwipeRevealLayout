@@ -60,7 +60,7 @@ public class ViewBinderHelper {
      * when you bind your view holder with the data object.
      *
      * @param swipeLayout swipeLayout of the current view.
-     * @param id a string that uniquely defines the data object of the current view.
+     * @param id
      */
     public void bind(final SwipeRevealLayout swipeLayout, final String id) {
         if (swipeLayout.shouldRequestLayout()) {

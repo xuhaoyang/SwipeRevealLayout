@@ -50,8 +50,9 @@ public class RecyclerDemoActivity extends AppCompatActivity {
     private void setupList() {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new RecycleViewDivider(this, RecycleViewDivider.VERTICAL, R.drawable.echat_common_item_divider));
 
-        adapter = new RecyclerAdapter(this, createList(20));
+        adapter = new RecyclerAdapter(this, createList(200));
         recyclerView.setAdapter(adapter);
     }
 

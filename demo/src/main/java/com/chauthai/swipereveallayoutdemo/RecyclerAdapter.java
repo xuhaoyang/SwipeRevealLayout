@@ -30,7 +30,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         mContext = context;
         mDataSet = dataSet;
         mInflater = LayoutInflater.from(context);
-
+        binderHelper.setOpenOnlyOne(true);
         // uncomment if you want to open only one row at a time
         // binderHelper.setOpenOnlyOne(true);
     }
@@ -105,6 +105,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
 
             textView.setText(data);
 
+            frontLayout.setClickable(true);
             frontLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
